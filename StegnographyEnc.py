@@ -1,6 +1,7 @@
 import cv2
 import string
- 
+import getpass as gp 
+
 enc = {} 
 dec = {} 
 
@@ -13,8 +14,8 @@ pic = cv2.imread("pic.jpg")
 i = pic.shape[0]
 j = pic.shape[0]
 
-key = input("Enter the Secret Key:" )
-text = input("Enter the text to encrypt: ")
+key = gp.getpass("Enter the Secret Key:" )
+text = gp.getpass("Enter the text to encrypt: ")
 
 kl = 0
 
