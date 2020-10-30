@@ -1,5 +1,5 @@
 import StegnographyEnc as ef
-
+import getpass as gp
 kl=0
 
 tln=len(ef.text)
@@ -11,7 +11,7 @@ z = 0
 ch = int(input("\nEnter 1 to extract data from Image : "))
 
 if ch == 1:
-    key1=input("\n\nRe enter key to extract text : ")
+    key1=gp.getpass("\n\n Enter the key to extract text : ")
     decrypt=""
 
     if ef.key == key1 :
