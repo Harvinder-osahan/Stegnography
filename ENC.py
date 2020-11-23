@@ -49,11 +49,18 @@ for i in range (l):
 
 cv2.imwrite("e_pic.jpg", epic)
 b = cv2.imread("e_pic.jpg")
-#os.system("eog e_pic.jpg")
+os.system("eog e_pic.jpg")
 os.system("tput setaf 7")
 print("!Data hidden successfully!")
 
 pickle_out = open("ef.pickle","wb")
 pickle.dump([l, epic, key, enc, dec], pickle_out)
 pickle_out.close()
-wb.open('https://mail.google.com')
+
+opt = int(input("1 For Mail \n 2 For Whatsapp \n 3 Exit\n -> "))
+if opt == 1:
+    wb.open('https://mail.google.com')
+elif opt == 2:
+    wb.open('https://web.whatsapp.com/')
+else:
+    exit()
